@@ -1,7 +1,7 @@
 <?php
 
 function conn() {
-    $cnx = mysqli_connect("localhost", "id10000585_heyimchara", "modaslm123", "id10000585_basemodaslm");
+    $cnx = mysqli_connect("localhost", "root", "", "basemodaslm");
     if (!$cnx) die('Deu errado a conexao!');
     return $cnx;
 }
