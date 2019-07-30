@@ -13,7 +13,7 @@ and open the template in the editor.
         <form action="" method="POST">
             <h2>Cadastrar Categoria</h2>
         
-        Categoria: <input type="text" name="nome"><br><br>
+        Categoria: <input type="text" name="nome" value="<?=@$categoria['nome']?>"><br><br>
         
         
         

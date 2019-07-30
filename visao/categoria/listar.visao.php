@@ -27,6 +27,7 @@ and open the template in the editor.
                 <td><?=$categoria['nome']?></td>
                 <td><a href="./categoria/ver/<?=$categoria['cod_categoria']?>">Ver</a></td>
                 <td><a href="./categoria/deletar/<?=$categoria['cod_categoria']?>">Deletar</a></td>
+                <td><a href="./categoria/editar/<?=$categoria['cod_categoria']?>">Editar</a></td>
             </tr>
         <?php endforeach; ?>
    </table> 
