@@ -15,12 +15,12 @@ and open the template in the editor.
         
         <form action="" method="POST">
             
-            Nome: <input type="text" name="nome"><br><br>
-            Email: <input type="text" name="email"><br><br>
-            CPF: <input type="text" name="cpf"><br><br>
-            Data de Nascimento: <input type="date" name="dataNasc"><br><br>
+            Nome: <input type="text" name="nome" value="<?=@$cliente["nome"]?>"><br><br>
+            Email: <input type="text" name="email" value="<?=@$cliente["email"]?>"><br><br>
+            CPF: <input type="text" name="cpf" value="<?=@$cliente["cpf"]?>"><br><br>
+            Data de Nascimento: <input type="date" name="dataNasc" value="<?=@$cliente["dataNasc"]?>"><br><br>
             
-  Sexo:   <select name="sexo">
+  Sexo:   <select name="sexo" value="<?=@$cliente["sexo"]?>">
   <option value=""></option>
   <option value="F">Feminino</option>
   <option value="M">Masculino</option>
@@ -29,8 +29,8 @@ and open the template in the editor.
 <br><br>
 
 
-            Senha: <input type="password" name="senha"><br><br>
-            Tipo de usuario: <input type ="text" name="tipousuario"><br><br>
+            Senha: <input type="password" name="senha" value="<?=@$cliente["senha"]?>"><br><br>
+            Tipo de usuario: <input type ="text" name="tipousuario" value="<?=@$cliente["tipousuario"]?>"><br><br>
            
             
             <button>Enviar</button>

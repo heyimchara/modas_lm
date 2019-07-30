@@ -27,6 +27,7 @@ and open the template in the editor.
                 <td><?=$cliente['nome']?></td>
                 <td><a href="./cliente/ver/<?=$cliente['cod_cliente']?>">Ver</a></td>
                  <td><a href="./cliente/deletar/<?=$cliente['cod_cliente']?>">Deletar</a></td>
+                 <td><a href="./cliente/editar/<?=$cliente['cod_cliente']?>">Editar</a></td>
                 
             </tr>
         <?php endforeach; ?>
