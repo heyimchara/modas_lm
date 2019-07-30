@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -26,6 +20,7 @@ and open the template in the editor.
                 <td><?=$produto['nome']?></td>
                 <td><a href="./produto/ver/<?=$produto['cod_produto']?>">Ver</a></td>
                 <td><a href="./produto/deletar/<?=$produto['cod_produto']?>">Deletar</a></td>
+                <td><a href="./produto/editar/<?=$produto['cod_produto']?>">Editar</a></td>
      </tr>
         <?php endforeach; ?>
    </table> 
