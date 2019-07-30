@@ -1,5 +1,4 @@
 <?php
-
 require_once 'servico/validacaoServico.php';
 require_once 'modelo/produtoModelo.php';
 
@@ -65,4 +64,17 @@ function deletar($cod){
     redirecionar("produto/listarProdutos");
 }
 
+function editar($cod_produto){
+     if (ehPost()){
+       $nome = $_POST["nome"];
+       $preco = $_POST["preco"];
+       $descricao = $_POST["descricao"];
+       
+       editarProduto($cod_produto, $nome, $descricao, $preco);
+       redirecionar("produto/listarProdutos");
+} else{
+    $dados["produto"] =  pegarProdutoPorId($cod_produto);
+    exibir("produto/formulario", $dados);
+}
+}
 ?>
