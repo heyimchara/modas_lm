@@ -41,14 +41,14 @@ function deletar($cod_categoria){
     $msg = deletarCategoria($cod_categoria);
     redirecionar("categoria/listarCategorias");
 }
-
 function editar($cod_categoria){
-   if (ehPost()){
+     if (ehPost()){
        $nome = $_POST["nome"];
-       editarCategoria($cod_categoria,$nome);
-       redirecionar("categoria/listarCategorias");
-   }else{
-       $dados["categoria"] = pegarCategoriaPorId($cod_categoria);
-       exibir("categoria/formulario", $dados);
-   }
+       
+       editarCategoria($nome);
+       redirecionar("produto/listarCategorias");
+} else{
+    $dados["categoria"] = pegarCategoriaPorId($cod_categoria);
+    exibir("categoria/formulario", $dados);
+} 
 }

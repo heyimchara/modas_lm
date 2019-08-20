@@ -36,14 +36,9 @@ function deletarCategoria($cod_categoria){
     }
     return 'Categoria deletada com sucesso!';
 }
-
-function editarCategoria($cod_categoria,$nome){
-    $sql = "UPDATE categoria SET nome = '$nome' WHERE cod_categoria = $cod_categoria";
-    $resultado = mysqli_query($cnx = conn(), $sql);
-   if (!$resultado) {
-        die ('Erro ao alterar categoria' . mysqli_error($cnx));    
-     }
-     
-     return 'Categoria alterado com sucesso!';   
+function editarCategoria($nome,$cod_categoria){
+    $sql = "UPDATE categoria SET nome = '$nome'  WHERE cod_categoria = $cod_categoria";
+    $resultado = mysqli_query($conexao = conn(), $sql);
+     if(!$resultado){ die('Erro ao editar categoria!' . mysqli_error($conexao)); }
+    return 'Categoria alterada com sucesso!';
 }
-

@@ -2,7 +2,7 @@
 
 require_once 'servico/validacaoServico.php';
 require_once 'modelo/clienteModelo.php';
-
+require_once 'modelo/enderecoModelo.php';
 
 function cadastro(){
     if (ehPost()){
@@ -81,24 +81,19 @@ function deletar($cod_cliente){
 }
 
 function editar($cod_cliente){
-    
-    if(ehPost()){
-       $nome = $_POST["nome"];
-       $email = $_POST["email"];
-       $senha = $_POST["senha"];
+     if (ehPost()){
+      $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
        $cpf = $_POST["cpf"];
        $sexo = $_POST ["sexo"];
        $dataNasc = $_POST ["dataNasc"];
        $tipousuario = $_POST ["tipousuario"];
        
-       editarCliente($cod_cliente,$nome, $cpf, $senha, $email, $sexo, $tipousuario, $dataNasc);
+       editarCliente($cod_cliente,$nome,$cpf,$senha,$email,$sexo,$tipousuario,$dataNasc);
        redirecionar("cliente/listarClientes");
-       
-    }else{
-
-        $dados["cliente"] = pegarClientePorId($cod_cliente);
-        exibir("cliente/cadastro", $dados);
-    }
-    
-    
+} else{
+    $dados["cliente"] =  pegarUsuarioPorId($cod_cliente);
+    exibir("cliente/formulario");
+} 
 }
